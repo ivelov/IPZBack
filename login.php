@@ -1,7 +1,7 @@
 <?php
 if($_POST['login'] === 'admin'  && $_POST['password'] === '123'){
-    echo true;
+    echo 1;
 }else{
-    abort(401);
+    echo 'Failure';
 }
 ?>

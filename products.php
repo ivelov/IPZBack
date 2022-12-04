@@ -69,9 +69,16 @@ function index($page = 1){
                 foreach ($filters as $filterName => $filter) {
                     $matched = false;
                     foreach ($featuresFormated as $featureName => $feature) {
-                        if($featureName == $filterName && $filter == $feature){
-                            $matched = true;
-                            break;
+                        if($featureName == $filterName ){
+                            foreach ($filter as $filterValue) {
+                                if($filterValue == $feature){
+                                    $matched = true;
+                                    break;
+                                }
+                            }
+                            if($matched){
+                                break;
+                            }
                         }
                     }
                     if(!$matched){

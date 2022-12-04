@@ -17,6 +17,4 @@ if($result){
     http_response_code(500);
     echo mysqli_error($mysqli);
 }
-
-
 ?>

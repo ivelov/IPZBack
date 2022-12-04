@@ -1,8 +1,6 @@
 <?php
 require_once 'env.php';
 
-//filters: ['видеокарты']
-
 function index($page = 1){
 
     $mysqli = new mysqli("localhost", $GLOBALS['db_user'], $GLOBALS['db_pass'], $GLOBALS['db_name']);
@@ -12,17 +10,17 @@ function index($page = 1){
     
     $whereWord = 'WHERE';
 
-    /*if(isset($_POST['filters'])){
+    if(isset($_POST['filters'])){
         $filters = $_POST['filters'];
     }else{
         $filters = false;
-    }*/
-    $filters = [
+    }
+    /*$filters = [
         'priceLow' => 1000,
         'priceHigh' => 4000,
         'Cores' => '2',
         'Частота' => '3ГГц'
-    ];
+    ];*/
 
     if($filters){
         foreach ($filters as $filterName => $filter) {
@@ -104,6 +102,5 @@ if(isset($_POST['page'])){
 }else{
     index();
 }
-
 
 ?>

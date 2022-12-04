@@ -9,10 +9,10 @@ if($result){
     foreach ($result as $category) {
         array_push($categories, [
             'name' => $category['name'],
-            'image' => isset($category['image']) ? $category['image'] : '',
+            'image' => isset($category['image']) ? $category['image'] : 'img/home-cat__img.jpg',
         ]);
     }
-    var_dump(json_encode($categories));
+    echo(json_encode($categories));
 }else{
     http_response_code(500);
     echo mysqli_error($mysqli);

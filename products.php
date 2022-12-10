@@ -93,7 +93,7 @@ function index($page = 1){
             array_push($productsFormated, [
                 'name' => $product['name'],
                 'price' => $product['price'],
-                'image' => isset($product['image']) ? $product['image'] : 'img/home-cat__img.jpg',
+                'image' => isset($product['image_link']) ? $product['image_link'] : 'img/home-cat__img.jpg',
                 'features' => $featuresFormated
             ]);
         }

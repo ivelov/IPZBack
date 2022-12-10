@@ -9,7 +9,7 @@ if($result){
     foreach ($result as $category) {
         array_push($categories, [
             'name' => $category['name'],
-            'image' => isset($category['image']) ? $category['image'] : 'img/home-cat__img.jpg',
+            'image' => isset($category['image_link']) ? $category['image_link'] : 'img/home-cat__img.jpg',
         ]);
     }
     echo(json_encode($categories));

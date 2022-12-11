@@ -7,7 +7,7 @@ if(!isset($_POST['productId']) || !isset($_POST['userId'])){
 }
 
 $mysqli = new mysqli("localhost", $GLOBALS['db_user'], $GLOBALS['db_pass'], $GLOBALS['db_name']);
-$result = $mysqli->query("INSERT INTO carts (product_id, user_id) VALUES ('{$_POST['productId']}', '{$_POST['userId']}')");
+$result = $mysqli->query("INSERT INTO products_in_cart (product_id, user_id) VALUES ('{$_POST['productId']}', '{$_POST['userId']}')");
 
 if($result){
     echo 'OK';

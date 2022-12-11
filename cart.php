@@ -7,7 +7,7 @@ if(!isset($_POST['userId'])){
 }
 
 $mysqli = new mysqli("localhost", $GLOBALS['db_user'], $GLOBALS['db_pass'], $GLOBALS['db_name']);
-$results = $mysqli->query("SELECT b.name, b.image_link FROM carts a
+$results = $mysqli->query("SELECT b.name, b.image_link FROM products_in_cart a
 INNER JOIN products b ON a.product_id = a.id)
 WHERE user_id = {$_POST['userId']}");
 

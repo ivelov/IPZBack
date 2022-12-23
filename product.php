@@ -26,7 +26,6 @@ if(isset($_POST['id'])){
                 'image' => isset($product['image_link']) ? $product['image_link'] : 'img/home-cat__img.jpg',
                 'features' => $featuresFormated
             ]);
-            echo $result[0]['id'];
         }else{
             http_response_code(422);
         }
